@@ -6,4 +6,8 @@ studentRoster.controller('StudentsCtrl', function StudentsCtrl($scope) {
     { "name":"Ryan Samuels" },
     { "name":"Brentwood Davis" }
   ]
+  $scope.addStudent = function() {
+    $scope.students.push({"name": $scope.studentName});
+    $scope.studentName = null;
+  };
 });
